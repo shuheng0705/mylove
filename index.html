@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态爱心</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+        }
+        .heart {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff6b6b, #ff3366);
+            position: relative;
+            transform: rotate(45deg);
+            animation: heartbeat 1.2s infinite;
+        }
+        .heart:before,
+        .heart:after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff6b6b, #ff3366);
+            border-radius: 50%;
+            position: absolute;
+        }
+        .heart:before {
+            left: -50px;
+        }
+        .heart:after {
+            top: -50px;
+        }
+        @keyframes heartbeat {
+            0% {
+                transform: rotate(45deg) scale(0.8);
+            }
+            5% {
+                transform: rotate(45deg) scale(0.9);
+            }
+            10% {
+                transform: rotate(45deg) scale(0.8);
+            }
+            15% {
+                transform: rotate(45deg) scale(1);
+            }
+            50% {
+                transform: rotate(45deg) scale(0.8);
+            }
+            100% {
+                transform: rotate(45deg) scale(0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+</body>
+</html>
